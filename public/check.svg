@@ -1,0 +1,38 @@
+<svg width="44px" height="37px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 37">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="step-gradient-1">
+            <stop stop-color="#064e3b" offset="0%"></stop>
+            <stop stop-color="#34d399" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="step-path-2" points="580 1018.5 587 1026.5 606.5 1006 587 1024.5"></polygon>
+        <filter x="-58.5%" y="-51.2%" width="224.5%" height="261.0%" filterUnits="objectBoundingBox" id="step-filter-3">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2"></feMorphology>
+            <feOffset dx="1" dy="4" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+            <feMorphology radius="1.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="1" dy="4" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter2" in2="shadowInner" operator="out" result="shadowOffsetOuter2"></feComposite>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0625081101   0 0 0 0 0.1454024   0 0 0 0 0.269743835  0 0 0 0.221212636 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-23" transform="translate(-571.000000, -1001.000000)">
+            <circle id="Oval-10-Copy" fill="url(#step-gradient-1)" cx="589" cy="1019" r="18"></circle>
+            <g id="Path-5-Copy" stroke-linecap="round" stroke-linejoin="round">
+                <use fill="black" fill-opacity="1" filter="url(#step-filter-3)" href="#step-path-2"></use>
+                <use stroke="#FFFFFF" stroke-width="3" href="#step-path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>
